@@ -75,6 +75,15 @@ integrated_explore_mpc_selfcontained_with_HEDAC.m
 - Convex corridors
 - Robot trajectory and sensing radius
 
+## Reproducibility and Randomness
+
+The robot start position, goal location, and obstacle placement are randomly generated. To ensure reproducible results that work correctly, the simulation uses a fixed random seed:
+
+```matlab
+rng(195212115);  % fixed seed for reproducibility
+```
+Changing or removing the seed (e.g., using ```rng('shuffle')```) will generate different environments each run. Some random configurations may place the goal inside an obstacle, create obstacles too close to the start, or occasionally trigger index errors. Using the provided fixed seed ensures that the example runs reliably, however, for verification of the exploration of entirely random scenarios requires changing the seed.
+
 ## Author
 ### Evan Watts 
 ME 556 – Robotics Final Project  
