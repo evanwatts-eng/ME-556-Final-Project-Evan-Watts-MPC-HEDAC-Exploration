@@ -55,7 +55,8 @@ Tnew = diffuse_heat_fast(T, dx, alpha, dt)
 ```
 ## Dependencies
 - MATLAB R2025a (or later)
-- YALMIP Optimization Toolbox (for quadprog)
+- Optimization Toolbox (for quadprog)
+- YALMIP (https://yalmip.github.io/)
 
 ---
 ## How to Run
